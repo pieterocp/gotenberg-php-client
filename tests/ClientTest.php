@@ -53,7 +53,7 @@ final class ClientTest extends TestCase
         ];
         $request = new HTMLRequest($index);
         $request->setResultFilename('foo.pdf');
-        $request->setWaitTimeout(5.0);
+        $request->setWaitTimeout(5.0, 's');
         $request->setWaitDelay(1.0);
         $request->setHeader($header);
         $request->setFooter($footer);
@@ -76,7 +76,7 @@ final class ClientTest extends TestCase
         $request = new URLRequest('https://google.com');
         $request->setResultFilename('foo.pdf');
         $request->setWaitTimeout(5.0);
-        $request->setWaitDelay(1.0);
+        $request->setWaitDelay(1.0, 's');
         $request->setHeader($header);
         $request->setFooter($footer);
         $request->setPaperSize(Request::A4);

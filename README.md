@@ -1,4 +1,4 @@
-**⚠️ Not working for Gotenberg >= 7 ⚠️** 
+**⚠️ Somewhat working for Gotenberg 7 ⚠️** 
 
 # Gotenberg PHP client
 

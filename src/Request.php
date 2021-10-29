@@ -28,7 +28,7 @@ abstract class Request
     /** @var string|null */
     private $resultFilename;
 
-    /** @var float|null */
+    /** @var string|null */
     private $waitTimeout;
 
     /** @var string|null */
@@ -85,9 +85,9 @@ abstract class Request
         $this->resultFilename = $resultFilename;
     }
 
-    public function setWaitTimeout(?float $waitTimeout): void
+    public function setWaitTimeout(?float $waitTimeout, ?string $waitTimeoutUnit = 's'): void
     {
-        $this->waitTimeout = $waitTimeout;
+        $this->waitTimeout = $waitTimeout . $waitTimeoutUnit;
     }
 
     public function setWebhookURL(?string $webhookURL): void

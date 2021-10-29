@@ -16,11 +16,11 @@ abstract class ChromeRequest extends Request implements GotenbergRequestInterfac
     private const MARGIN_LEFT = 'marginLeft';
     private const MARGIN_RIGHT = 'marginRight';
     private const LANDSCAPE = 'landscape';
-    private const PAGE_RANGES = 'pageRanges';
+    private const PAGE_RANGES = 'nativePageRanges';
     private const GOOGLE_CHROME_RPCC_BUFFER_SIZE = 'googleChromeRpccBufferSize';
     private const SCALE = 'scale';
 
-    /** @var float|null */
+    /** @var string|null */
     private $waitDelay;
 
     /** @var Document|null */
@@ -116,9 +116,9 @@ abstract class ChromeRequest extends Request implements GotenbergRequestInterfac
         return $files;
     }
 
-    public function setWaitDelay(?float $waitDelay): void
+    public function setWaitDelay(?float $waitDelay, ?string $waitDelayUnit = 's'): void
     {
-        $this->waitDelay = $waitDelay;
+        $this->waitDelay = $waitDelay . $waitDelayUnit;
     }
 
     /**

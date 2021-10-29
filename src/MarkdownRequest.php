@@ -20,7 +20,7 @@ final class MarkdownRequest extends HTMLRequest implements GotenbergRequestInter
 
     public function getPostURL(): string
     {
-        return '/convert/markdown';
+        return '/forms/chromium/convert/markdown';
     }
 
     /**

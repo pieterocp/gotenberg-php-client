@@ -7,7 +7,7 @@ namespace TheCodingMachine\Gotenberg;
 final class OfficeRequest extends Request implements GotenbergRequestInterface
 {
     private const LANDSCAPE = 'landscape';
-    private const PAGE_RANGES = 'pageRanges';
+    private const PAGE_RANGES = 'nativePageRanges';
 
     /** @var Document[] */
     private $files;
@@ -29,7 +29,7 @@ final class OfficeRequest extends Request implements GotenbergRequestInterface
 
     public function getPostURL(): string
     {
-        return '/convert/office';
+        return '/forms/libreoffice/convert';
     }
 
     /**

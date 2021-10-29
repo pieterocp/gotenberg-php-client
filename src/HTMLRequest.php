@@ -21,7 +21,7 @@ class HTMLRequest extends ChromeRequest implements GotenbergRequestInterface
 
     public function getPostURL(): string
     {
-        return '/convert/html';
+        return '/forms/chromium/convert/html';
     }
 
     /**
